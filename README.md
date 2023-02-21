@@ -48,7 +48,7 @@ I will try to apply mobile first approach of responsive web design.
 
 ### Useful resources
 
-- [How to Take the Right Approach to Responsive Web Design](https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/) - This helped me to understand how to use media quries and right units for responsive web design. I really liked this pattern and will use it going forward.
+- [How to Take the Right Approach to Responsive Web Design](https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/) - This helped me to understand how to use media queries and right units for responsive web design. I really liked this pattern and will use it going forward.
 
 
 ## Author
