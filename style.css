@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  /*  font  */
+  --font-family: "Barlow Semi Condensed", sans-serif;
+  --font-size: 0.8rem;
+
+  /* Primary Color */
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackis-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  /* Neutral Color */
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* Spacing and Border */
+  --margin: 1rem;
+  --padding: 1rem;
+  --border-radius: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 500;
+  background-color: var(--Light-grayish-blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 1110px;
+  height: 572px;
+
+  display: grid;
+  grid: repeat(2, 1fr) / repeat(4, 1fr);
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+}
+article {
+  border-radius: var(--border-radius);
+  padding: calc(var(--padding) * 2.1) calc(var(--padding) * 2.3);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  color: var(--Light-grayish-blue);
+  box-shadow: 45px 45px 46px -46px rgba(0, 0, 0, 0.19);
+}
+
+article h2 {
+  font-weight: 600;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--margin) * 0.8);
+}
+.user img {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+/* first card */
+.daniel {
+  grid-area: daniel;
+  background-color: var(--Moderate-violet);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 78% top;
+  background-size: 104 102px;
+}
+
+.daniel img,
+.patrick img {
+  border: 2px solid rgba(167, 117, 241, 1);
+}
+
+/* second card */
+.jonathan {
+  grid-area: jonathan;
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+/* third card */
+.kira {
+  grid-area: kira;
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+
+/* fouth card */
+.jeanette {
+  grid-area: jeanette;
+
+  background: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+
+/* fifth card */
+.patrick {
+  grid-area: patrick;
+  background: var(--Very-dark-grayish-blue);
+}
+
+.kira .user .user-bio p:last-of-type,
+.jeanette .user .user-bio p:last-of-type,
+.daniel .user .user-bio p:last-of-type,
+.jonathan .user .user-bio p:last-of-type,
+.patrick .user .user-bio p:last-of-type {
+  opacity: 0.5;
+}
+.kira q,
+.jeanette q,
+.daniel q,
+.jonathan q,
+.patrick q {
+  opacity: 0.7;
+}
+
+footer {
+  height: 10vh;
+  width: 80%;
+  text-align: center;
+  color: var(--Very-dark-grayish-blue);
+  font-size: calc(var(--fontSize) * 1.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding);
+}
+
+footer a {
+  color: var(--veryDarkGrayishBlue);
+}
+footer a:hover {
+  font-weight: 600;
+  color: var(--veryDarkBlackishBlue);
+}
+
+/* moblie view */
+@media only screen and (max-width: 768px) {
+  body {
+    height: 2020px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 444px 240px 222px 384px 438px;
+    gap: 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira";
+    width: 327px;
+  }
+  article {
+    padding: calc(var(--padding) * 2.1) calc(var(--padding) * 2.14);
+  }
+  .daniel {
+    background-position: 90% top;
+  }
+}
