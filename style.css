@@ -44,10 +44,11 @@ main {
   height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .container {
-  width: 90%;
+  width:90%;
   height: 572px;
 
   display: grid;
@@ -165,10 +166,10 @@ footer a:hover {
 
 /* moblie view */
 @media only screen and (max-width: 768px) {
+
   body {
     height: 2020px;
   }
-  
   main{
     display: grid;
   }
