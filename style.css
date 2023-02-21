@@ -47,7 +47,7 @@ main {
 }
 
 .container {
-  width: 1110px;
+  width: 90%;
   height: 572px;
 
   display: grid;
@@ -168,6 +168,10 @@ footer a:hover {
   body {
     height: 2020px;
   }
+  
+  main{
+    display: grid;
+  }
 
   .container {
     display: grid;
@@ -181,7 +185,6 @@ footer a:hover {
       "jeanette"
       "patrick"
       "kira";
-    width: 327px;
   }
   article {
     padding: calc(var(--padding) * 2.1) calc(var(--padding) * 2.14);
