@@ -49,7 +49,6 @@ main {
 
 .container {
   width:90%;
-  height: 572px;
 
   display: grid;
   grid: repeat(2, 1fr) / repeat(4, 1fr);
